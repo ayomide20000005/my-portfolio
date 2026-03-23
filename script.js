@@ -1,31 +1,25 @@
-// 1. Dynamic Year in Footer
+// Dynamic Year
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// 2. Smooth Scrolling for Nav Links
+// Smooth Scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
     });
 });
 
-// 3. Scroll Fade-In Animation
-// This watches elements with class 'fade-in' and adds 'visible' when they appear on screen
-const observerOptions = {
-    threshold: 0.1 // Trigger when 10% of the element is visible
-};
-
+// Fade-In on Scroll
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('visible');
-            observer.unobserve(entry.target); // Only animate once
+            observer.unobserve(entry.target);
         }
     });
-}, observerOptions);
+}, { threshold: 0.1 });
 
-document.querySelectorAll('.fade-in').forEach(el => {
-    observer.observe(el);
-});
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
