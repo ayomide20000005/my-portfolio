@@ -12,22 +12,20 @@
 </head>
 <body>
     <nav class="navbar">
-        <div class="container nav-container">
-            <div class="logo">Shuaib Alameen</div>
-            <div class="nav-links">
-                <a href="#projects">Projects</a>
-                <a href="#research">Research</a>
-                <a href="#skills">Skills</a>
-                <a href="#books">Books</a>
-                <a href="#contact">Contact</a>
-            </div>
+        <div class="logo">Shuaib Alameen</div>
+        <div class="nav-links">
+            <a href="#projects">Projects</a>
+            <a href="#research">Research</a>
+            <a href="#skills">Skills</a>
+            <a href="#books">Books</a>
+            <a href="#contact">Contact</a>
         </div>
     </nav>
 
     <header class="hero">
         <div class="container fade-in">
             <div class="profile-wrapper">
-                <img src="mypic.jpg" alt="Shuaib Alameen" class="profile-img">
+                <img src="mypic.jpg" alt="Shuaib Alameen" class="profile-img lightbox-trigger">
             </div>
             <p class="subtitle">AI Researcher and System Engineer</p>
             <h1>Shuaib Alameen</h1>
@@ -39,215 +37,99 @@
         </div>
     </header>
 
-    <section id="projects" class="section">
-        <div class="container fade-in">
-            <h2 class="section-title">Projects</h2>
-            <div class="project-grid">
-                <div class="project-card" data-project="hardpaper" data-images='["hardpaper1.JPG", "hardpaper2.JPG"]'>
-                    <div class="project-image lightbox-trigger">
-                        <img src="hardpaper1.JPG" alt="HardPaper">
-                    </div>
-                    <div class="project-info">
-                        <h3>HardPaper</h3>
-                        <p>Research-first IDE that bridges software engineering and academic research with AI automation.</p>
-                        <div class="tags">
-                            <span>Electron</span><span>LaTeX</span><span>AI</span><span>Node.js</span>
-                        </div>
-                        <div class="card-links">
-                            <a href="https://github.com/ayomide20000005/hardpaper" target="_blank" class="btn-link">GitHub</a>
-                            <button class="btn-link details-trigger">Details</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card" data-project="acces" data-images='["acess1.JPG", "acess2.JPG"]'>
-                    <div class="project-image lightbox-trigger">
-                        <img src="acess1.JPG" alt="Acces Studio">
-                    </div>
-                    <div class="project-info">
-                        <h3>Acces Studio</h3>
-                        <p>Professional-grade offline desktop video creation suite with no-code visual editor.</p>
-                        <div class="tags">
-                            <span>Electron</span><span>React</span><span>Remotion</span><span>FFmpeg</span>
-                        </div>
-                        <div class="card-links">
-                            <a href="https://github.com/ayomide20000005/Access-Studio" target="_blank" class="btn-link">GitHub</a>
-                            <button class="btn-link details-trigger">Details</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card" data-project="demis" data-images='["demis1.JPG", "demis2.JPG"]'>
-                    <div class="project-image lightbox-trigger">
-                        <img src="demis1.JPG" alt="Demis">
-                    </div>
-                    <div class="project-info">
-                        <h3>Demis</h3>
-                        <p>Environment Architect utility for VS Code that automates complex dev setup synchronization.</p>
-                        <div class="tags">
-                            <span>TypeScript</span><span>VS Code API</span><span>Node.js</span>
-                        </div>
-                        <div class="card-links">
-                            <a href="https://github.com/ayomide20000005/Demis" target="_blank" class="btn-link">GitHub</a>
-                            <button class="btn-link details-trigger">Details</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card" data-project="boseman" data-images='["boseman1.JPG", "boseman2.JPG"]'>
-                    <div class="project-image lightbox-trigger">
-                        <img src="boseman1.JPG" alt="Boseman">
-                    </div>
-                    <div class="project-info">
-                        <h3>Boseman</h3>
-                        <p>Geospatial search engine tracking urban wildlife displacement using satellite imagery.</p>
-                        <div class="tags">
-                            <span>Python</span><span>Flask</span><span>Leaflet</span><span>GIS</span>
-                        </div>
-                        <div class="card-links">
-                            <a href="https://github.com/ayomide20000005/Boseman" target="_blank" class="btn-link">GitHub</a>
-                            <button class="btn-link details-trigger">Details</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <section id="research" class="section bg-alt">
         <div class="container fade-in">
             <h2 class="section-title">Research</h2>
             <div class="list-group">
-                <div class="list-item">
+                <div class="list-item" data-research="toward" data-images='["towards1.JPG", "towards2.JPG", "towards3.JPG"]'>
                     <div class="list-info">
                         <h3>Toward a Memory That Does Not Burn</h3>
-                        <p>AI-Driven Federated Framework for Knowledge Recovery & Preservation</p>
+                        <p>AI-Driven Federated Framework for Knowledge Recovery & Preservation • 60+ downloads globally</p>
                     </div>
                     <div class="list-links">
                         <a href="https://doi.org/10.5281/zenodo.18926211" target="_blank">DOI</a>
                         <a href="https://doi.org/10.5281/zenodo.18926211" target="_blank">Zenodo</a>
                     </div>
                 </div>
+                <div class="list-item" data-research="usdri" data-images='["urban1.JPG", "urban2.JPG", "urban3.JPG"]'>
+                    <div class="list-info">
+                        <h3>Urban Snake Displacement Risk Index (USDRI)</h3>
+                        <p>A Quantitative Framework for Measuring Displacement Pressure in Urbanizing Regions</p>
+                    </div>
+                    <div class="list-links">
+                        <a href="https://doi.org/10.5281/zenodo.19245787" target="_blank">DOI</a>
+                        <a href="https://doi.org/10.5281/zenodo.19245787" target="_blank">Zenodo</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="section skills-section">
+    <section id="projects" class="section">
         <div class="container fade-in">
-            <div class="skills-container">
-                <h2 class="section-title">Technical Skills</h2>
-                <div class="accordion">
-                    <div class="accordion-item">
-                        <button class="accordion-header">
-                            <span class="accordion-title">Programming Languages</span>
-                            <span class="accordion-icon">+</span>
-                        </button>
-                        <div class="accordion-content">
-                            <div class="skill-tags">
-                                <span><i class="devicon-python-plain colored"></i> Python</span>
-                                <span><i class="devicon-go-plain-wordmark"></i> Go</span>
-                                <span><i class="devicon-mysql-plain-wordmark"></i> SQL</span>
-                                <span><i class="devicon-javascript-plain"></i> JavaScript</span>
-                                <span><i class="devicon-r-plain"></i> R</span>
-                                <span><i class="devicon-latex-plain"></i> LaTeX</span>
-                            </div>
+            <h2 class="section-title">Projects</h2>
+            <div class="grid">
+                <div class="card" data-project="hardpaper" data-images='["hardpaper1.JPG", "hardpaper2.JPG"]'>
+                    <div class="card-image lightbox-trigger">
+                        <img src="hardpaper1.JPG" alt="HardPaper">
+                    </div>
+                    <div class="card-content">
+                        <h3>HardPaper</h3>
+                        <p>Research-first IDE that bridges software engineering and academic research with AI automation.</p>
+                        <div class="tags">
+                            <span>Electron</span><span>LaTeX</span><span>AI</span><span>Node.js</span>
+                        </div>
+                        <div class="links">
+                            <a href="https://github.com/ayomide20000005/hardpaper" target="_blank">GitHub</a>
+                            <button class="details-trigger">Details</button>
                         </div>
                     </div>
-                    <div class="accordion-item">
-                        <button class="accordion-header">
-                            <span class="accordion-title">Machine Learning & AI</span>
-                            <span class="accordion-icon">+</span>
-                        </button>
-                        <div class="accordion-content">
-                            <div class="skill-tags">
-                                <span><i class="devicon-pytorch-plain colored"></i> PyTorch</span>
-                                <span><i class="devicon-tensorflow-plain"></i> TensorFlow</span>
-                                <span><i class="devicon-scikit-learn-plain"></i> Scikit-learn</span>
-                                <span>KBS</span>
-                                <span>RAG</span>
-                                <span><i class="devicon-numpy-plain"></i> NumPy</span>
-                                <span><i class="devicon-pandas-plain"></i> Pandas</span>
-                                <span>Hugging Face</span>
-                                <span>LangChain</span>
-                                <span>Vector DB</span>
-                            </div>
+                </div>
+                <div class="card" data-project="acces" data-images='["acess1.JPG", "acess2.JPG"]'>
+                    <div class="card-image lightbox-trigger">
+                        <img src="acess1.JPG" alt="Acces Studio">
+                    </div>
+                    <div class="card-content">
+                        <h3>Acces Studio</h3>
+                        <p>Professional-grade offline desktop video creation suite with no-code visual editor.</p>
+                        <div class="tags">
+                            <span>Electron</span><span>React</span><span>Remotion</span><span>FFmpeg</span>
+                        </div>
+                        <div class="links">
+                            <a href="https://github.com/ayomide20000005/Access-Studio" target="_blank">GitHub</a>
+                            <button class="details-trigger">Details</button>
                         </div>
                     </div>
-                    <div class="accordion-item">
-                        <button class="accordion-header">
-                            <span class="accordion-title">Backend & Cloud</span>
-                            <span class="accordion-icon">+</span>
-                        </button>
-                        <div class="accordion-content">
-                            <div class="skill-tags">
-                                <span><i class="devicon-go-plain-wordmark"></i> Golang</span>
-                                <span><i class="devicon-postgresql-plain"></i> PostgreSQL</span>
-                                <span><i class="devicon-mysql-plain-wordmark"></i> MySQL</span>
-                                <span><i class="devicon-mongodb-plain-wordmark"></i> MongoDB</span>
-                                <span><i class="devicon-redis-plain"></i> Redis</span>
-                                <span><i class="devicon-fastapi-plain"></i> FastAPI</span>
-                                <span><i class="devicon-flask-plain"></i> Flask</span>
-                                <span><i class="devicon-amazonwebservices-plain-wordmark"></i> AWS</span>
-                                <span><i class="devicon-googlecloud-plain"></i> GCP</span>
-                            </div>
+                </div>
+                <div class="card" data-project="demis" data-images='["demis1.JPG", "demis2.JPG"]'>
+                    <div class="card-image lightbox-trigger">
+                        <img src="demis1.JPG" alt="Demis">
+                    </div>
+                    <div class="card-content">
+                        <h3>Demis</h3>
+                        <p>Environment Architect utility for VS Code that automates complex dev setup synchronization.</p>
+                        <div class="tags">
+                            <span>TypeScript</span><span>VS Code API</span><span>Node.js</span>
+                        </div>
+                        <div class="links">
+                            <a href="https://github.com/ayomide20000005/Demis" target="_blank">GitHub</a>
+                            <button class="details-trigger">Details</button>
                         </div>
                     </div>
-                    <div class="accordion-item">
-                        <button class="accordion-header">
-                            <span class="accordion-title">API Integration</span>
-                            <span class="accordion-icon">+</span>
-                        </button>
-                        <div class="accordion-content">
-                            <div class="skill-tags">
-                                <span>RESTful APIs</span>
-                                <span>GraphQL</span>
-                                <span>Webhooks</span>
-                                <span>gRPC</span>
-                                <span>OAuth2</span>
-                                <span>OpenAPI/Swagger</span>
-                            </div>
-                        </div>
+                </div>
+                <div class="card" data-project="boseman" data-images='["boseman1.JPG", "boseman2.JPG"]'>
+                    <div class="card-image lightbox-trigger">
+                        <img src="boseman1.JPG" alt="Boseman">
                     </div>
-                    <div class="accordion-item">
-                        <button class="accordion-header">
-                            <span class="accordion-title">Desktop & Frontend</span>
-                            <span class="accordion-icon">+</span>
-                        </button>
-                        <div class="accordion-content">
-                            <div class="skill-tags">
-                                <span><i class="devicon-electron-plain"></i> Electron</span>
-                                <span><i class="devicon-nextjs-plain"></i> Next.js</span>
-                                <span><i class="devicon-react-plain"></i> React</span>
-                                <span><i class="devicon-tailwindcss-plain"></i> Tailwind CSS</span>
-                                <span>HTML5</span>
-                                <span>CSS3</span>
-                            </div>
+                    <div class="card-content">
+                        <h3>Boseman</h3>
+                        <p>Geospatial search engine tracking urban wildlife displacement using satellite imagery.</p>
+                        <div class="tags">
+                            <span>Python</span><span>Flask</span><span>Leaflet</span><span>GIS</span>
                         </div>
-                    </div>
-                    <div class="accordion-item">
-                        <button class="accordion-header">
-                            <span class="accordion-title">Product Design</span>
-                            <span class="accordion-icon">+</span>
-                        </button>
-                        <div class="accordion-content">
-                            <div class="skill-tags">
-                                <span>UI Design</span>
-                                <span>UX Architecture</span>
-                                <span>Visual Prototyping</span>
-                                <span>Glassmorphism</span>
-                                <span>Design Systems</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <button class="accordion-header">
-                            <span class="accordion-title">Authorship & Research</span>
-                            <span class="accordion-icon">+</span>
-                        </button>
-                        <div class="accordion-content">
-                            <div class="skill-tags">
-                                <span>Technical Writing</span>
-                                <span>Book Authorship</span>
-                                <span>Scientific Communication</span>
-                                <span>Technical Documentation</span>
-                            </div>
+                        <div class="links">
+                            <a href="https://github.com/ayomide20000005/Boseman" target="_blank">GitHub</a>
+                            <button class="details-trigger">Details</button>
                         </div>
                     </div>
                 </div>
@@ -255,11 +137,114 @@
         </div>
     </section>
 
-    <section id="books" class="section bg-alt">
+    <section id="skills" class="section bg-alt">
+        <div class="container fade-in">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-content">
+                        <h3><i class="devicon-python-plain colored"></i> Programming Languages</h3>
+                        <div class="tags">
+                            <span><i class="devicon-python-plain"></i> Python</span>
+                            <span><i class="devicon-go-plain-wordmark"></i> Go</span>
+                            <span><i class="devicon-mysql-plain-wordmark"></i> SQL</span>
+                            <span><i class="devicon-javascript-plain"></i> JavaScript</span>
+                            <span><i class="devicon-r-plain"></i> R</span>
+                            <span><i class="devicon-latex-plain"></i> LaTeX</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3><i class="devicon-pytorch-plain colored"></i> Machine Learning & AI</h3>
+                        <div class="tags">
+                            <span><i class="devicon-pytorch-plain"></i> PyTorch</span>
+                            <span><i class="devicon-tensorflow-plain"></i> TensorFlow</span>
+                            <span><i class="devicon-scikit-learn-plain"></i> Scikit-learn</span>
+                            <span>KBS</span>
+                            <span>RAG</span>
+                            <span><i class="devicon-numpy-plain"></i> NumPy</span>
+                            <span><i class="devicon-pandas-plain"></i> Pandas</span>
+                            <span>Hugging Face</span>
+                            <span>LangChain</span>
+                            <span>Vector DB</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3><i class="devicon-fastapi-plain-wordmark colored"></i> Backend & Cloud</h3>
+                        <div class="tags">
+                            <span><i class="devicon-go-plain-wordmark"></i> Golang</span>
+                            <span><i class="devicon-postgresql-plain"></i> PostgreSQL</span>
+                            <span><i class="devicon-mysql-plain-wordmark"></i> MySQL</span>
+                            <span><i class="devicon-mongodb-plain-wordmark"></i> MongoDB</span>
+                            <span><i class="devicon-redis-plain"></i> Redis</span>
+                            <span><i class="devicon-fastapi-plain"></i> FastAPI</span>
+                            <span><i class="devicon-flask-plain"></i> Flask</span>
+                            <span><i class="devicon-amazonwebservices-plain-wordmark"></i> AWS</span>
+                            <span><i class="devicon-googlecloud-plain"></i> GCP</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3><i class="devicon-postman-plain"></i> API Integration</h3>
+                        <div class="tags">
+                            <span>RESTful APIs</span>
+                            <span>GraphQL</span>
+                            <span>Webhooks</span>
+                            <span>gRPC</span>
+                            <span>OAuth2</span>
+                            <span>OpenAPI/Swagger</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3><i class="devicon-react-plain colored"></i> Desktop & Frontend</h3>
+                        <div class="tags">
+                            <span><i class="devicon-electron-plain"></i> Electron</span>
+                            <span><i class="devicon-nextjs-plain"></i> Next.js</span>
+                            <span><i class="devicon-react-plain"></i> React</span>
+                            <span><i class="devicon-tailwindcss-plain"></i> Tailwind CSS</span>
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3><i class="devicon-figma-plain"></i> Product Design</h3>
+                        <div class="tags">
+                            <span>UI Design</span>
+                            <span>UX Architecture</span>
+                            <span>Visual Prototyping</span>
+                            <span>Glassmorphism</span>
+                            <span>Design Systems</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3><i class="devicon-markdown-plain"></i> Authorship & Research</h3>
+                        <div class="tags">
+                            <span>Technical Writing</span>
+                            <span>Book Authorship</span>
+                            <span>Scientific Communication</span>
+                            <span>Technical Documentation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="books" class="section">
         <div class="container fade-in">
             <h2 class="section-title">Books</h2>
             <div class="subsection-title">Published</div>
-            <div class="book-card">
+            <div class="book-card published-book">
                 <div class="book-cover">
                     <img src="quiet-shelf.jpg" alt="Quiet Shelf" class="lightbox-trigger">
                 </div>
@@ -270,7 +255,7 @@
                     </div>
                     <p class="book-subtitle">Modernization of Library and Information Science</p>
                     <p>A comprehensive exploration of transforming library systems for the digital age.</p>
-                    <div class="links">
+                    <div class="links" style="margin-top: 15px;">
                         <a href="#">Get Copy</a>
                     </div>
                 </div>
@@ -289,12 +274,24 @@
                     <p class="small-text">Description coming soon.</p>
                 </div>
             </div>
+            <div class="book-card placeholder">
+                <div class="book-cover">
+                    <div class="book-cover empty">Cover TBD</div>
+                </div>
+                <div class="book-info">
+                    <div class="book-header">
+                        <h3>Untitled Project</h3>
+                        <span class="status">Concept</span>
+                    </div>
+                    <p class="small-text">Description coming soon.</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <footer id="contact">
         <div class="container fade-in">
-            <h2 class="section-title">Let's Connect</h2>
+            <h2 class="section-title" style="border:none; padding:0;">Let's Connect</h2>
             <p class="bio">Open for collaborations on AI systems, research, and technical writing.</p>
             <div class="buttons">
                 <a href="mailto:contact@shuaibalameen.com" class="btn primary">Email Me</a>
@@ -312,7 +309,7 @@
     <div id="project-modal" class="modal">
         <div class="modal-overlay"></div>
         <div class="modal-content">
-            <button class="modal-close">&times;</button>
+            <span class="modal-close">&times;</span>
             <div class="modal-body">
                 <h2 id="modal-title"></h2>
                 <p id="modal-description"></p>

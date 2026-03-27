@@ -22,16 +22,6 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-// Accordion for Skills
-document.querySelectorAll('.accordion-header').forEach(header => {
-    header.addEventListener('click', () => {
-        const item = header.parentElement;
-        const isActive = item.classList.contains('active');
-        document.querySelectorAll('.accordion-item').forEach(i => i.classList.remove('active'));
-        if (!isActive) item.classList.add('active');
-    });
-});
-
 // Project Data
 const projectData = {
     hardpaper: {
@@ -49,7 +39,7 @@ const projectData = {
             tech: ['Electron', 'JavaScript', 'LaTeX', 'Monaco Editor', 'AI/ML', 'Node.js']
         },
         links: [
-            { text: 'GitHub', url: 'https://github.com/yourusername/hardpaper' }
+            { text: 'GitHub', url: 'https://github.com/ayomide20000005/hardpaper' }
         ]
     },
     acces: {
@@ -67,7 +57,7 @@ const projectData = {
             tech: ['Electron', 'React', 'Remotion', 'Tailwind CSS', 'FFmpeg']
         },
         links: [
-            { text: 'GitHub', url: 'https://github.com/yourusername/acces-studio' }
+            { text: 'GitHub', url: 'https://github.com/ayomide20000005/Access-Studio' }
         ]
     },
     demis: {
@@ -85,7 +75,7 @@ const projectData = {
             tech: ['TypeScript', 'VS Code Extension API', 'Node.js']
         },
         links: [
-            { text: 'GitHub', url: 'https://github.com/yourusername/demis' },
+            { text: 'GitHub', url: 'https://github.com/ayomide20000005/Demis' },
             { text: 'Marketplace', url: '#' }
         ]
     },
@@ -104,7 +94,7 @@ const projectData = {
             tech: ['Python', 'Flask', 'Leaflet.js', 'Google Earth Engine API', 'PostgreSQL']
         },
         links: [
-            { text: 'GitHub', url: 'https://github.com/yourusername/boseman' },
+            { text: 'GitHub', url: 'https://github.com/ayomide20000005/Boseman' },
             { text: 'Live Map', url: '#' }
         ]
     }
@@ -122,7 +112,7 @@ const modalLinks = document.getElementById('modal-links');
 document.querySelectorAll('.details-trigger').forEach(btn => {
     btn.addEventListener('click', (e) => {
         e.stopPropagation();
-        const card = btn.closest('.project-card');
+        const card = btn.closest('.card');
         const project = projectData[card.dataset.project];
         if (!project) return;
         
@@ -184,13 +174,14 @@ const prevImage = () => {
     updateLightboxImage();
 };
 
-document.querySelectorAll('.lightbox-trigger').forEach(img => {
+// Project and Book Images
+document.querySelectorAll('.card-image.lightbox-trigger, .book-cover img.lightbox-trigger').forEach(img => {
     img.addEventListener('click', (e) => {
         e.stopPropagation();
-        const card = img.closest('.project-card') || img.closest('.book-card');
+        const card = img.closest('.card') || img.closest('.book-card');
         let images = [];
         
-        if (card.classList.contains('project-card')) {
+        if (card.classList.contains('card') && card.dataset.images) {
             images = JSON.parse(card.dataset.images);
         } else {
             images = [img.src];
@@ -199,6 +190,23 @@ document.querySelectorAll('.lightbox-trigger').forEach(img => {
         const startIndex = images.indexOf(img.src);
         openLightbox(images, startIndex >= 0 ? startIndex : 0);
     });
+});
+
+// Research Images
+document.querySelectorAll('.list-item').forEach(item => {
+    if (item.dataset.images) {
+        item.addEventListener('click', (e) => {
+            if (!e.target.closest('.list-links')) {
+                const images = JSON.parse(item.dataset.images);
+                openLightbox(images, 0);
+            }
+        });
+    }
+});
+
+// Profile Image
+document.querySelector('.profile-img.lightbox-trigger')?.addEventListener('click', () => {
+    openLightbox(['mypic.jpg'], 0);
 });
 
 const closeLightbox = () => {
