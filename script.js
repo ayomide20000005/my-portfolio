@@ -22,7 +22,7 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-// Project Data (Updated: removed Live Map/Marketplace, added Download for Acces)
+// Project Data
 const projectData = {
     hardpaper: {
         title: 'HardPaper',
@@ -93,7 +93,8 @@ const projectData = {
             tech: ['Python', 'Flask', 'Leaflet.js', 'Google Earth Engine API', 'PostgreSQL']
         },
         links: [
-            { text: 'GitHub', url: 'https://github.com/ayomide20000005/Boseman' }
+            { text: 'GitHub', url: 'https://github.com/ayomide20000005/Boseman' },
+            { text: 'Live Preview', url: 'https://boseman.vercel.app' }
         ]
     }
 };
@@ -120,7 +121,7 @@ document.querySelectorAll('.details-trigger').forEach(btn => {
         modalDetails.innerHTML = `
             <h4>Key Features</h4>
             <ul>${project.details.features.map(f => `<li>${f}</li>`).join('')}</ul>
-            <h4 style="margin-top: 16px;">Technology</h4>
+            <h4 style="margin-top: 14px;">Technology</h4>
             <ul>${project.details.tech.map(t => `<li>${t}</li>`).join('')}</ul>
         `;
         modalLinks.innerHTML = project.links.map(link => `<a href="${link.url}" target="_blank">${link.text}</a>`).join('');
@@ -172,7 +173,7 @@ const prevImage = () => {
     updateLightboxImage();
 };
 
-// Project and Book Images (skip text-only research items)
+// Project and Book Images
 document.querySelectorAll('.card-image.lightbox-trigger, .book-cover img.lightbox-trigger').forEach(img => {
     img.addEventListener('click', (e) => {
         e.stopPropagation();
