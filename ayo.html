@@ -4,31 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shuaib Alameen | AI System Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <!-- Navigation -->
     <nav class="navbar">
-        <div class="logo">Shuaib Alameen</div>
-        <ul class="nav-links">
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#research">Research</a></li>
-            <li><a href="#books">Books</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+        <div class="container nav-container">
+            <div class="logo">Shuaib Alameen</div>
+            <div class="nav-links">
+                <a href="#projects">Projects</a>
+                <a href="#research">Research</a>
+                <a href="#skills">Skills</a>
+                <a href="#books">Books</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
     </nav>
 
-    <!-- Hero Section -->
     <header class="hero">
-        <div class="container">
+        <div class="container fade-in">
             <div class="profile-wrapper">
-                <img src="images/profile.jpg" alt="Shuaib Alameen" class="profile-img">
+                <img src="https://via.placeholder.com/150" alt="Shuaib Alameen" class="profile-img">
             </div>
             <p class="subtitle">AI Researcher and System Engineer</p>
             <h1>Shuaib Alameen</h1>
-            <p class="bio">you are a research-driven engineer who can tackle both abstract AI theory and high-stakes real-world problems.</p>
+            <p class="bio">Problem solver at the intersection of deterministic logic and neural intelligence. Specializing in persistent memory and neuro-symbolic AI, I bridge high-level research with systems engineering. Every project prioritizes privacy, speed, and structural integrity to build the future of stable AI memory.</p>
             <div class="buttons">
                 <a href="#projects" class="btn primary">View Projects</a>
                 <a href="#contact" class="btn secondary">Get in Touch</a>
@@ -36,65 +39,67 @@
         </div>
     </header>
 
-    <!-- Projects Section -->
     <section id="projects" class="section">
-        <div class="container">
+        <div class="container fade-in">
             <h2 class="section-title">Projects</h2>
-            <div class="grid">
-                <div class="card fade-in">
-                    <div class="card-image">
-                        <img src="images/hardpaper.jpg.JPG" alt="HardPaper" class="lightbox-trigger">
+            <div class="project-grid">
+                <div class="project-card" data-project="hardpaper">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400" alt="HardPaper">
                     </div>
-                    <div class="card-content">
+                    <div class="project-info">
                         <h3>HardPaper</h3>
-                        <p>AI-powered research IDE that analyzes code projects and auto-generates LaTeX papers (IEEE, ACM, Springer). Features Monaco editor, citation manager, and live preview.</p>
-                        <div class="tags"><span>Electron</span><span>LaTeX</span><span>Monaco</span><span>AI</span></div>
-                        <div class="links"><a href="#">GitHub</a><a href="#">Demo</a></div>
+                        <p>AI-powered research IDE that analyzes code projects and auto-generates LaTeX papers</p>
+                        <div class="tags">
+                            <span>Electron</span><span>LaTeX</span><span>AI</span>
+                        </div>
                     </div>
                 </div>
-                <div class="card fade-in">
-                    <div class="card-image">
-                        <img src="images/acces.jpg.JPG" alt="Acces Studio" class="lightbox-trigger">
+                <div class="project-card" data-project="acces">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400" alt="Acces Studio">
                     </div>
-                    <div class="card-content">
+                    <div class="project-info">
                         <h3>Acces Studio</h3>
-                        <p>Offline, no-code video studio built with Electron & Remotion. Drag-and-drop builder, brand kits, and local-first MP4/GIF export engine.</p>
-                        <div class="tags"><span>Electron</span><span>Remotion</span><span>JavaScript</span></div>
-                        <div class="links"><a href="#">GitHub</a><a href="#">Demo</a></div>
+                        <p>Offline, no-code video studio built with Electron & Remotion</p>
+                        <div class="tags">
+                            <span>Electron</span><span>Remotion</span><span>JavaScript</span>
+                        </div>
                     </div>
                 </div>
-                <div class="card fade-in">
-                    <div class="card-image">
-                        <img src="images/demis.jpg.JPG" alt="Demis" class="lightbox-trigger">
+                <div class="project-card" data-project="demis">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400" alt="Demis">
                     </div>
-                    <div class="card-content">
+                    <div class="project-info">
                         <h3>Demis</h3>
-                        <p>AI-powered VS Code extension that suggests and configures dev environments based on your role. Built for developers, made to share.</p>
-                        <div class="tags"><span>VS Code API</span><span>AI</span><span>TypeScript</span></div>
-                        <div class="links"><a href="#">GitHub</a><a href="#">Marketplace</a></div>
+                        <p>AI-powered VS Code extension for dev environment configuration</p>
+                        <div class="tags">
+                            <span>VS Code</span><span>AI</span><span>TypeScript</span>
+                        </div>
                     </div>
                 </div>
-                <div class="card fade-in">
-                    <div class="card-image">
-                        <img src="images/boseman.jpg.JPG" alt="Boseman" class="lightbox-trigger">
+                <div class="project-card" data-project="boseman">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400" alt="Boseman">
                     </div>
-                    <div class="card-content">
+                    <div class="project-info">
                         <h3>Boseman</h3>
-                        <p>Urban snake displacement research tool. Computes the USDRI risk score using iNaturalist, GBIF, and Google Earth Engine data with Leaflet maps.</p>
-                        <div class="tags"><span>Flask</span><span>Leaflet</span><span>Python</span><span>GIS</span></div>
-                        <div class="links"><a href="#">GitHub</a><a href="#">Live Map</a></div>
+                        <p>Urban snake displacement research tool with GIS mapping</p>
+                        <div class="tags">
+                            <span>Flask</span><span>Python</span><span>GIS</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Research Section -->
-    <section id="research" class="section bg-alt">
-        <div class="container">
+    <section id="research" class="section">
+        <div class="container fade-in">
             <h2 class="section-title">Research</h2>
             <div class="list-group">
-                <div class="list-item fade-in">
+                <div class="list-item">
                     <div class="list-info">
                         <h3>Toward a Memory That Does Not Burn</h3>
                         <p>AI-Driven Federated Framework for Knowledge Recovery & Preservation</p>
@@ -108,15 +113,139 @@
         </div>
     </section>
 
-    <!-- Books Section -->
+    <section id="skills" class="section skills-section">
+        <div class="container fade-in">
+            <div class="skills-container">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span class="accordion-title">Programming Languages</span>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="skill-tags">
+                                <span><i class="devicon-python-plain colored"></i> Python</span>
+                                <span><i class="devicon-go-plain-wordmark"></i> Go</span>
+                                <span><i class="devicon-mysql-plain-wordmark"></i> SQL</span>
+                                <span><i class="devicon-javascript-plain"></i> JavaScript</span>
+                                <span><i class="devicon-r-plain"></i> R</span>
+                                <span><i class="devicon-latex-plain"></i> LaTeX</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span class="accordion-title">Machine Learning & AI</span>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="skill-tags">
+                                <span><i class="devicon-pytorch-plain colored"></i> PyTorch</span>
+                                <span><i class="devicon-tensorflow-plain"></i> TensorFlow</span>
+                                <span><i class="devicon-scikit-learn-plain"></i> Scikit-learn</span>
+                                <span>KBS</span>
+                                <span>RAG</span>
+                                <span><i class="devicon-numpy-plain"></i> NumPy</span>
+                                <span><i class="devicon-pandas-plain"></i> Pandas</span>
+                                <span>Hugging Face</span>
+                                <span>LangChain</span>
+                                <span>Vector DB</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span class="accordion-title">Backend & Cloud</span>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="skill-tags">
+                                <span><i class="devicon-go-plain-wordmark"></i> Golang</span>
+                                <span><i class="devicon-postgresql-plain"></i> PostgreSQL</span>
+                                <span><i class="devicon-mysql-plain-wordmark"></i> MySQL</span>
+                                <span><i class="devicon-mongodb-plain-wordmark"></i> MongoDB</span>
+                                <span><i class="devicon-redis-plain"></i> Redis</span>
+                                <span><i class="devicon-fastapi-plain"></i> FastAPI</span>
+                                <span><i class="devicon-flask-plain"></i> Flask</span>
+                                <span><i class="devicon-amazonwebservices-plain-wordmark"></i> AWS</span>
+                                <span><i class="devicon-googlecloud-plain"></i> GCP</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span class="accordion-title">API Integration</span>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="skill-tags">
+                                <span>RESTful APIs</span>
+                                <span>GraphQL</span>
+                                <span>Webhooks</span>
+                                <span>gRPC</span>
+                                <span>OAuth2</span>
+                                <span>OpenAPI/Swagger</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span class="accordion-title">Desktop & Frontend</span>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="skill-tags">
+                                <span><i class="devicon-electron-plain"></i> Electron</span>
+                                <span><i class="devicon-nextjs-plain"></i> Next.js</span>
+                                <span><i class="devicon-react-plain"></i> React</span>
+                                <span><i class="devicon-tailwindcss-plain"></i> Tailwind CSS</span>
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span class="accordion-title">Product Design</span>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="skill-tags">
+                                <span>UI Design</span>
+                                <span>UX Architecture</span>
+                                <span>Visual Prototyping</span>
+                                <span>Glassmorphism</span>
+                                <span>Design Systems</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span class="accordion-title">Authorship & Research</span>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="skill-tags">
+                                <span>Technical Writing</span>
+                                <span>Book Authorship</span>
+                                <span>Scientific Communication</span>
+                                <span>Technical Documentation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="books" class="section">
-        <div class="container">
+        <div class="container fade-in">
             <h2 class="section-title">Books</h2>
-            
-            <h3 class="subsection-title">Published</h3>
-            <div class="book-card fade-in published-book">
+            <div class="subsection-title">Published</div>
+            <div class="book-card">
                 <div class="book-cover">
-                    <img src="images/quiet.png" alt="Quiet Shelf" class="lightbox-trigger">
+                    <img src="https://via.placeholder.com/200x300" alt="Quiet Shelf" class="lightbox-trigger">
                 </div>
                 <div class="book-info">
                     <div class="book-header">
@@ -125,60 +254,64 @@
                     </div>
                     <p class="book-subtitle">Modernization of Library and Information Science</p>
                     <p>A comprehensive exploration of transforming library systems for the digital age.</p>
-                    <div class="links"><a href="#">Get Copy</a></div>
+                    <div class="links">
+                        <a href="#">Get Copy</a>
+                    </div>
                 </div>
             </div>
 
-            <h3 class="subsection-title">In Development</h3>
-            <div class="grid">
-                <div class="book-card fade-in dev-book placeholder">
-                    <div class="book-cover empty">
-                        <span>Cover TBD</span>
-                    </div>
-                    <div class="book-info">
-                        <div class="book-header">
-                            <h3>Untitled Project</h3>
-                            <span class="status">Concept</span>
-                        </div>
-                        <p class="small-text">Description coming soon.</p>
-                    </div>
+            <div class="subsection-title">In Development</div>
+            <div class="book-card placeholder">
+                <div class="book-cover">
+                    <div class="book-cover empty">Cover TBD</div>
                 </div>
-                <div class="book-card fade-in dev-book placeholder">
-                    <div class="book-cover empty">
-                        <span>Cover TBD</span>
+                <div class="book-info">
+                    <div class="book-header">
+                        <h3>Untitled Project</h3>
+                        <span class="status">Concept</span>
                     </div>
-                    <div class="book-info">
-                        <div class="book-header">
-                            <h3>Untitled Project</h3>
-                            <span class="status">Concept</span>
-                        </div>
-                        <p class="small-text">Description coming soon.</p>
-                    </div>
+                    <p class="small-text">Description coming soon.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact / Footer -->
     <footer id="contact">
-        <div class="container">
-            <h2>Let's Connect</h2>
-            <p>Open for collaborations on AI systems, research, and technical writing.</p>
-            <a href="mailto:contact@shuaibalameen.com" class="btn primary">Email Me</a>
+        <div class="container fade-in">
+            <h2 class="section-title">Let's Connect</h2>
+            <p class="bio">Open for collaborations on AI systems, research, and technical writing.</p>
+            <div class="buttons">
+                <a href="mailto:contact@shuaibalameen.com" class="btn primary">Email Me</a>
+            </div>
             <div class="socials">
                 <a href="#">GitHub</a>
                 <a href="#">LinkedIn</a>
                 <a href="#">Twitter</a>
             </div>
-            <p class="copyright">&copy; <span id="year"></span> Shuaib Alameen. All rights reserved.</p>
+            <p class="copyright">© <span id="year"></span> Shuaib Alameen. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Lightbox Modal -->
+    <!-- Project Modal -->
+    <div id="project-modal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-body">
+                <h2 id="modal-title"></h2>
+                <p id="modal-description"></p>
+                <div class="modal-tags" id="modal-tags"></div>
+                <div class="modal-details" id="modal-details"></div>
+                <div class="modal-links" id="modal-links"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox for Images -->
     <div id="lightbox" class="lightbox">
         <span class="lightbox-close">&times;</span>
-        <img class="lightbox-content" id="lightbox-img">
-        <div id="lightbox-caption"></div>
+        <img id="lightbox-img" class="lightbox-content">
+        <p id="lightbox-caption"></p>
     </div>
 
     <script src="script.js"></script>
