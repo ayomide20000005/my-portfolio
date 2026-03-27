@@ -22,7 +22,7 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-// Project Data
+// Project Data (Updated: removed Live Map/Marketplace, added Download for Acces)
 const projectData = {
     hardpaper: {
         title: 'HardPaper',
@@ -75,8 +75,7 @@ const projectData = {
             tech: ['TypeScript', 'VS Code Extension API', 'Node.js']
         },
         links: [
-            { text: 'GitHub', url: 'https://github.com/ayomide20000005/Demis' },
-            { text: 'Marketplace', url: '#' }
+            { text: 'GitHub', url: 'https://github.com/ayomide20000005/Demis' }
         ]
     },
     boseman: {
@@ -94,8 +93,7 @@ const projectData = {
             tech: ['Python', 'Flask', 'Leaflet.js', 'Google Earth Engine API', 'PostgreSQL']
         },
         links: [
-            { text: 'GitHub', url: 'https://github.com/ayomide20000005/Boseman' },
-            { text: 'Live Map', url: '#' }
+            { text: 'GitHub', url: 'https://github.com/ayomide20000005/Boseman' }
         ]
     }
 };
@@ -174,14 +172,14 @@ const prevImage = () => {
     updateLightboxImage();
 };
 
-// Project and Book Images
+// Project and Book Images (skip text-only research items)
 document.querySelectorAll('.card-image.lightbox-trigger, .book-cover img.lightbox-trigger').forEach(img => {
     img.addEventListener('click', (e) => {
         e.stopPropagation();
         const card = img.closest('.card') || img.closest('.book-card');
         let images = [];
         
-        if (card.classList.contains('card') && card.dataset.images) {
+        if (card && card.dataset.images) {
             images = JSON.parse(card.dataset.images);
         } else {
             images = [img.src];
@@ -192,16 +190,14 @@ document.querySelectorAll('.card-image.lightbox-trigger, .book-cover img.lightbo
     });
 });
 
-// Research Images
-document.querySelectorAll('.list-item').forEach(item => {
-    if (item.dataset.images) {
-        item.addEventListener('click', (e) => {
-            if (!e.target.closest('.list-links')) {
-                const images = JSON.parse(item.dataset.images);
-                openLightbox(images, 0);
-            }
-        });
-    }
+// Research Images (only items with data-images attribute)
+document.querySelectorAll('.list-item[data-images]').forEach(item => {
+    item.addEventListener('click', (e) => {
+        if (!e.target.closest('.list-links')) {
+            const images = JSON.parse(item.dataset.images);
+            openLightbox(images, 0);
+        }
+    });
 });
 
 // Profile Image
