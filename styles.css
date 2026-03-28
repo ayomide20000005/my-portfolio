@@ -1,12 +1,12 @@
 :root {
     --bg: #E5E5E0;
     --bg-alt: #F1F5F9;
-    --card-bg: #FFFFFF;
+    --card-bg: #ffffff;
     --text: #09090B;
     --text-muted: #52525B;
     --accent: #7c3aed;
     --accent-hover: #9f7aea;
-    --border: #D4D4D8;
+    --border: #9e9efe;
     --border-alt: #E2E8F0;
     --font-main: 'Inter', sans-serif;
     --font-code: 'JetBrains Mono', monospace;
