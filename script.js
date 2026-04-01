@@ -96,6 +96,25 @@ const projectData = {
             { text: 'GitHub', url: 'https://github.com/ayomide20000005/Boseman' },
             { text: 'Live Preview', url: 'https://boseman.vercel.app' }
         ]
+    },
+    usdri: {
+        title: 'USDRI API',
+        description: 'A deployed calculator API that computes composite displacement risk scores from environmental variables using the Urban Snake Displacement Risk Index methodology. Built directly from a published Zenodo paper, the scoring logic is general enough to apply to any displacement risk context beyond wildlife.',
+        tags: ['FastAPI', 'Python', 'Pydantic', 'Uvicorn', 'Render'],
+        details: {
+            features: [
+                'Two endpoints — raw input and pre-normalized input',
+                'Composite 0–100 risk score with four-band classification',
+                'Built directly from peer-reviewed published methodology',
+                'Stateless and dependency-free — no database required',
+                'Auto-generated interactive documentation via Swagger'
+            ],
+            tech: ['Python', 'FastAPI', 'Pydantic', 'Uvicorn', 'Render']
+        },
+        links: [
+            { text: 'GitHub', url: 'https://github.com/ayomide20000005/USDRI-API' },
+            { text: 'Live Docs', url: 'https://usdri-api.onrender.com/docs' }
+        ]
     }
 };
 
@@ -114,7 +133,7 @@ document.querySelectorAll('.details-trigger').forEach(btn => {
         const card = btn.closest('.card');
         const project = projectData[card.dataset.project];
         if (!project) return;
-        
+
         modalTitle.textContent = project.title;
         modalDescription.textContent = project.description;
         modalTags.innerHTML = project.tags.map(tag => `<span>${tag}</span>`).join('');
@@ -125,7 +144,7 @@ document.querySelectorAll('.details-trigger').forEach(btn => {
             <ul>${project.details.tech.map(t => `<li>${t}</li>`).join('')}</ul>
         `;
         modalLinks.innerHTML = project.links.map(link => `<a href="${link.url}" target="_blank">${link.text}</a>`).join('');
-        
+
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
     });
@@ -179,25 +198,15 @@ document.querySelectorAll('.card-image.lightbox-trigger, .book-cover img.lightbo
         e.stopPropagation();
         const card = img.closest('.card') || img.closest('.book-card');
         let images = [];
-        
+
         if (card && card.dataset.images) {
             images = JSON.parse(card.dataset.images);
         } else {
             images = [img.src];
         }
-        
+
         const startIndex = images.indexOf(img.src);
         openLightbox(images, startIndex >= 0 ? startIndex : 0);
-    });
-});
-
-// Research Images (only items with data-images attribute)
-document.querySelectorAll('.list-item[data-images]').forEach(item => {
-    item.addEventListener('click', (e) => {
-        if (!e.target.closest('.list-links')) {
-            const images = JSON.parse(item.dataset.images);
-            openLightbox(images, 0);
-        }
     });
 });
 
@@ -220,3 +229,23 @@ document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowRight' && lightbox.classList.contains('active')) nextImage();
     if (e.key === 'ArrowLeft' && lightbox.classList.contains('active')) prevImage();
 });
+
+// Theme Toggle
+const themeLightBtn = document.getElementById('theme-light');
+const themeDarkBtn = document.getElementById('theme-dark');
+
+const applyTheme = (theme) => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+    if (theme === 'dark') {
+        themeLightBtn.classList.remove('active');
+        themeDarkBtn.classList.add('active');
+    } else {
+        themeLightBtn.classList.add('active');
+        themeDarkBtn.classList.remove('active');
+    }
+};
+
+themeLightBtn.addEventListener('click', () => applyTheme('light'));
+themeDarkBtn.addEventListener('click', () => applyTheme('dark'));
+applyTheme(localStorage.getItem('theme') || 'light');
