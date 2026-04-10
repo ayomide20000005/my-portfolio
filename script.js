@@ -115,6 +115,25 @@ const projectData = {
             { text: 'GitHub', url: 'https://github.com/ayomide20000005/USDRI-API' },
             { text: 'Live Docs', url: 'https://usdri-api.onrender.com/docs' }
         ]
+    },
+    policy: {
+        title: 'Policy',
+        description: 'Policy is an AI safety infrastructure tool that generates structured, auditable reasoning architectures for AI systems.',
+        tags: ['React', 'Vite', 'Tailwind', 'FastAPI', 'NVIDIA NIM', 'Hugging Face Spaces'],
+        details: {
+            features: [
+                'Generates auditable reasoning chains for AI decision-making',
+                'Structured AI safety workflows with compliance tracking',
+                'Integration with NVIDIA NIM for accelerated inference',
+                'Deployed on Hugging Face Spaces for easy access',
+                'React-based dashboard with real-time visualization'
+            ],
+            tech: ['React', 'Vite', 'Tailwind CSS', 'FastAPI', 'NVIDIA NIM', 'Hugging Face Spaces']
+        },
+        links: [
+            { text: 'GitHub', url: 'https://github.com/ayomide20000005/policy' },
+            { text: 'Preview', url: 'https://policy-three-alpha.vercel.app' }
+        ]
     }
 };
 
