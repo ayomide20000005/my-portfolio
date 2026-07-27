@@ -102,7 +102,7 @@ ul { list-style: none; }
 .list-links a { font-family: var(--font-code); font-size: 0.85rem; color: var(--accent); font-weight: 500; }
 .list-links a:hover { text-decoration: underline; }
 
-/* Skills */
+
 .card h3 { display: flex; align-items: center; gap: 10px; font-size: 1.1rem; font-weight: 600; }
 .card h3 i { font-size: 1.2em; }
 
