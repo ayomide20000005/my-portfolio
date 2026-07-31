@@ -1,404 +1,495 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shuaib Alameen | AI System Engineer</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-    <link rel="stylesheet" href="styles.css">
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Shuaib Alameen | AI System Engineer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#131117",
+                        "surface": "#1c1922",
+                        "surface-container": "#1e1b26",
+                        "surface-container-low": "#17141d",
+                        "surface-container-lowest": "#0e0c11",
+                        "on-surface": "#ece8f5",
+                        "on-background": "#ece8f5",
+                        "outline-variant": "rgba(167,139,250,0.15)",
+                        "text-muted": "#a39db3",
+                        "accent-purple": "#8b5cf6",
+                        "accent-purple-light": "#a78bfa",
+                        "on-primary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "section-gap": "120px",
+                        "margin-desktop": "80px",
+                        "base": "8px",
+                        "gutter": "24px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "display-lg-mobile": ["DM Sans"],
+                        "headline-md": ["DM Sans"],
+                        "label-sm": ["DM Sans"],
+                        "body-lg": ["DM Sans"],
+                        "display-lg": ["DM Sans"],
+                        "body-md": ["DM Sans"]
+                    },
+                    "fontSize": {
+                        "display-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #131117;
+            color: #ece8f5;
+            font-family: 'DM Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        .glass-card {
+            background: rgba(28, 25, 34, 0.4);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(167, 139, 250, 0.1);
+        }
+    </style>
 </head>
-<body>
-    <nav class="navbar">
-        <div class="container nav-container">
-            <div class="logo">Shuaib Alameen</div>
-            <div class="nav-links">
-                <a href="#research">Research</a>
-                <a href="#awards">Achievements</a>
-                <a href="#projects">Projects</a>
-                <a href="#skills">Skills</a>
-                <a href="#books">Books</a>
-                <a href="#contact">Contact</a>
-            </div>
-            <div class="theme-switch" id="theme-switch">
-                <span id="theme-light" class="active">Light</span>
-                <span id="theme-dark">Dark</span>
-            </div>
-        </div>
-    </nav>
-
-    <header class="hero">
-        <div class="container fade-in">
-            <div class="profile-wrapper">
-                <img src="mypic.jpg" alt="Shuaib Alameen" class="profile-img lightbox-trigger">
-            </div>
-            <p class="subtitle">AI Researcher and System Engineer</p>
-            <h1>Shuaib Alameen</h1>
-            <p class="bio">Software Engineer and Researcher. I specialize in building high integrity systems that prioritize performance and data privacy. My strength lies in my adaptability, I thrive on navigating diverse technical challenges, allowing me to integrate into any team or project and deliver value rapidly.</p>
-            <div class="buttons">
-                <a href="#projects" class="btn primary">View Projects</a>
-                <a href="resume.pdf" target="_blank" class="btn secondary">View Resume</a>
-            </div>
-        </div>
-    </header>
-
-    <section id="research" class="section">
-        <div class="container fade-in">
-            <h2 class="section-title">Research</h2>
-            <div class="list-group">
-                <div class="list-item text-only">
-                    <div class="list-info">
-                        <h3><span class="page-label">PAGE</span> Programming AI-Guided Language</h3>
-                        <p>A proposed reasoning architecture designed to map human cognition to machine-executable logic. This project provides a deterministic, human-readable interaction layer for the next generation of neuro-symbolic AI systems.</p>
-                    </div>
-                    <div class="list-links">
-                        <a href="https://ayomide20000005.github.io/page/" target="_blank">View Page</a>
-                    </div>
-                </div>
-                <div class="list-item text-only">
-                    <div class="list-info">
-                        <h3>Toward a Memory That Does Not Burn</h3>
-                        <p>AI-Driven Federated Framework for Knowledge Recovery & Preservation • 100+ downloads globally</p>
-                    </div>
-                    <div class="list-links">
-                        <a href="https://doi.org/10.5281/zenodo.18926211" target="_blank">DOI</a>
-                        <a href="https://doi.org/10.5281/zenodo.18926211" target="_blank">Zenodo</a>
-                    </div>
-                </div>
-                <div class="list-item text-only">
-                    <div class="list-info">
-                        <h3>Urban Snake Displacement Risk Index (USDRI)</h3>
-                        <p>A Quantitative Framework for Measuring Displacement Pressure in Urbanizing Regions</p>
-                    </div>
-                    <div class="list-links">
-                        <a href="https://doi.org/10.5281/zenodo.19245787" target="_blank">DOI</a>
-                        <a href="https://doi.org/10.5281/zenodo.19245787" target="_blank">Zenodo</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="awards" class="section">
-    <div class="container fade-in">
-        <h2 class="section-title">Achievements</h2>
-        <div class="list-group">
-            <div class="list-item text-only">
-                <div class="list-info">
-                    <h3>Deep Learning Indaba 2026</h3>
-                    <p>Selected Researcher, 2026.</p>
-                </div>
-            </div>
-            <div class="list-item text-only">
-                <div class="list-info">
-                    <h3>Adaption Labs Research Grant</h3>
-                    <p>Granted by Adaption Labs, an AI research company founded by Sara Hooker (ex-Google DeepMind, Cohere). San Francisco, 2026.</p>
-                </div>
-            </div>
-        </div>
-    </div>
+<body class="bg-background selection:bg-accent-purple/30 selection:text-white">
+<!-- TopNavBar -->
+<nav class="bg-background/80 backdrop-blur-md flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-7xl mx-auto w-full docked full-width top-0 z-50 sticky border-b border-outline-variant/30">
+<div class="font-headline-md text-headline-md font-bold text-accent-purple-light">Shuaib Alameen</div>
+<div class="hidden lg:flex space-x-6 items-center">
+<a class="font-body-md text-sm text-on-surface hover:text-accent-purple-light transition-colors duration-300" href="#about">About</a>
+<a class="font-body-md text-sm text-on-surface hover:text-accent-purple-light transition-colors duration-300" href="#research">Research</a>
+<a class="font-body-md text-sm text-on-surface hover:text-accent-purple-light transition-colors duration-300" href="#projects">Projects</a>
+<a class="font-body-md text-sm text-on-surface hover:text-accent-purple-light transition-colors duration-300" href="#skills">Skills</a>
+<a class="font-body-md text-sm text-on-surface hover:text-accent-purple-light transition-colors duration-300" href="#books">Books</a>
+<a class="font-body-md text-sm text-on-surface hover:text-accent-purple-light transition-colors duration-300" href="#contact">Contact</a>
+<a class="bg-accent-purple text-on-primary px-6 py-2 rounded font-body-md text-body-md hover:opacity-90 transition-all active:scale-95" href="resume.pdf" target="_blank">Resume</a>
+</div>
+<button class="lg:hidden text-accent-purple-light" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+<!-- Mobile Menu Overlay -->
+<div class="hidden fixed inset-0 z-[60] bg-background/95 backdrop-blur-xl flex-col items-center justify-center space-y-8 p-margin-mobile" id="mobile-menu">
+<button class="absolute top-6 right-6 text-accent-purple-light" onclick="document.getElementById('mobile-menu').classList.add('hidden')">
+<span class="material-symbols-outlined">close</span>
+</button>
+<a class="font-display-lg-mobile text-display-lg-mobile text-on-surface" href="#about" onclick="document.getElementById('mobile-menu').classList.add('hidden')">About</a>
+<a class="font-display-lg-mobile text-display-lg-mobile text-on-surface" href="#research" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Research</a>
+<a class="font-display-lg-mobile text-display-lg-mobile text-on-surface" href="#projects" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Projects</a>
+<a class="font-display-lg-mobile text-display-lg-mobile text-on-surface" href="#skills" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Skills</a>
+<a class="font-display-lg-mobile text-display-lg-mobile text-on-surface" href="#books" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Books</a>
+<a class="font-display-lg-mobile text-display-lg-mobile text-on-surface" href="#contact" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Contact</a>
+</div>
+<main class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop overflow-hidden">
+<!-- Hero Section -->
+<section class="min-h-[80vh] flex flex-col md:flex-row items-center justify-between py-12 md:py-24 gap-12">
+<div class="flex-1 space-y-6 text-center md:text-left">
+<span class="font-label-sm text-label-sm text-accent-purple-light tracking-widest uppercase">AI Researcher &amp; System Engineer</span>
+<h1 class="font-display-lg text-display-lg md:text-[64px] leading-tight text-on-surface">
+                    Building <span class="text-accent-purple-light">intelligent systems</span> through code and research.
+                </h1>
+<p class="font-body-lg text-body-lg text-text-muted max-w-xl mx-auto md:mx-0">
+                    Software Engineer and Researcher. I specialize in building high integrity systems that prioritize performance and data privacy — adaptable enough to integrate into any team and deliver value rapidly.
+                </p>
+<div class="pt-4 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+<a class="bg-[#F5F1ED] text-[#0C0A09] px-8 py-3 rounded-lg font-body-md text-body-md font-bold hover:bg-white transition-colors" href="#projects">View Projects</a>
+<a class="border border-accent-purple text-accent-purple-light px-8 py-3 rounded-lg font-body-md text-body-md font-bold hover:bg-accent-purple/10 transition-colors" href="resume.pdf" target="_blank">View Resume</a>
+</div>
+</div>
+<div class="flex-1 flex justify-center md:justify-end relative">
+<div class="relative w-64 h-64 md:w-96 md:h-96">
+<div class="absolute inset-0 bg-accent-purple/20 rounded-full blur-3xl -z-10 animate-pulse"></div>
+<img alt="Shuaib Alameen" class="w-full h-full object-cover rounded-full border-2 border-accent-purple grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl" src="mypic.jpg"/>
+</div>
+</div>
 </section>
+<!-- About Section -->
+<section class="mt-section-gap py-12" id="about">
+<div class="flex flex-col md:flex-row gap-16 items-start">
+<div class="w-full md:w-1/3 md:sticky md:top-32">
+<h2 class="font-display-lg text-display-lg text-on-surface">About <br/><span class="text-accent-purple-light">Shuaib</span></h2>
+<div class="mt-6 w-16 h-1 bg-accent-purple"></div>
+</div>
+<div class="w-full md:w-2/3 space-y-8">
+<p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
+                        I am a software engineer and researcher dedicated to building systems that hold up under real pressure. From research-first developer tools to geospatial risk analysis, I approach every project with an emphasis on integrity, performance, and data privacy.
+                    </p>
+<p class="font-body-lg text-body-lg text-text-muted leading-relaxed">
+                        My work spans AI safety infrastructure, offline-first desktop applications, and published academic research — grounded by a belief that rigorous engineering and rigorous writing are the same discipline, applied differently.
+                    </p>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-8 pt-8">
+<div>
+<p class="font-label-sm text-label-sm text-accent-purple-light uppercase mb-2">Systems</p>
+<ul class="font-body-md text-body-md text-on-surface space-y-1">
+<li>Python / Go</li>
+<li>FastAPI / Flask</li>
+<li>PostgreSQL</li>
+<li>AWS / GCP</li>
+</ul>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-accent-purple-light uppercase mb-2">AI &amp; Research</p>
+<ul class="font-body-md text-body-md text-on-surface space-y-1">
+<li>PyTorch / RAG</li>
+<li>LangChain</li>
+<li>AI Safety</li>
+<li>Published Papers</li>
+</ul>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-accent-purple-light uppercase mb-2">Craft</p>
+<ul class="font-body-md text-body-md text-on-surface space-y-1">
+<li>Technical Writing</li>
+<li>Book Authorship</li>
+<li>Product Design</li>
+<li>Design Systems</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Research Section -->
+<section class="mt-section-gap" id="research">
+<div class="mb-12">
+<span class="font-label-sm text-label-sm text-accent-purple-light uppercase tracking-[0.2em]">Publications</span>
+<h2 class="font-display-lg text-display-lg text-on-surface mt-2">Research</h2>
+</div>
+<div class="space-y-6">
+<div class="glass-card rounded-xl p-8 border border-outline-variant/20">
+<div class="flex items-center gap-3 mb-2">
+<span class="text-xs font-bold uppercase tracking-widest text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded">Page</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Programming AI-Guided Language</h3>
+</div>
+<p class="font-body-md text-body-md text-text-muted mb-4">A proposed reasoning architecture designed to map human cognition to machine-executable logic — a deterministic, human-readable interaction layer for the next generation of neuro-symbolic AI systems.</p>
+<a class="font-body-md text-body-md text-accent-purple-light hover:underline" href="https://ayomide20000005.github.io/page/" target="_blank">View Page →</a>
+</div>
+<div class="glass-card rounded-xl p-8 border border-outline-variant/20">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Toward a Memory That Does Not Burn</h3>
+<p class="font-body-md text-body-md text-text-muted mb-4">AI-Driven Federated Framework for Knowledge Recovery &amp; Preservation • 100+ downloads globally</p>
+<div class="flex gap-6">
+<a class="font-body-md text-body-md text-accent-purple-light hover:underline" href="https://doi.org/10.5281/zenodo.18926211" target="_blank">DOI →</a>
+<a class="font-body-md text-body-md text-accent-purple-light hover:underline" href="https://doi.org/10.5281/zenodo.18926211" target="_blank">Zenodo →</a>
+</div>
+</div>
+<div class="glass-card rounded-xl p-8 border border-outline-variant/20">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Urban Snake Displacement Risk Index (USDRI)</h3>
+<p class="font-body-md text-body-md text-text-muted mb-4">A Quantitative Framework for Measuring Displacement Pressure in Urbanizing Regions.</p>
+<div class="flex gap-6">
+<a class="font-body-md text-body-md text-accent-purple-light hover:underline" href="https://doi.org/10.5281/zenodo.19245787" target="_blank">DOI →</a>
+<a class="font-body-md text-body-md text-accent-purple-light hover:underline" href="https://doi.org/10.5281/zenodo.19245787" target="_blank">Zenodo →</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Achievements Section -->
+<section class="mt-section-gap" id="achievements">
+<div class="mb-12">
+<span class="font-label-sm text-label-sm text-accent-purple-light uppercase tracking-[0.2em]">Recognition</span>
+<h2 class="font-display-lg text-display-lg text-on-surface mt-2">Achievements</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="glass-card rounded-xl p-8 border border-outline-variant/20">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Deep Learning Indaba 2026</h3>
+<p class="font-body-md text-body-md text-text-muted">Selected Researcher, 2026.</p>
+</div>
+<div class="glass-card rounded-xl p-8 border border-outline-variant/20">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Adaption Labs Research Grant</h3>
+<p class="font-body-md text-body-md text-text-muted">Granted by Adaption Labs, an AI research company founded by Sara Hooker (ex-Google DeepMind, Cohere). San Francisco, 2026.</p>
+</div>
+</div>
+</section>
+<!-- Projects Grid -->
+<section class="mt-section-gap" id="projects">
+<div class="mb-12 flex justify-between items-end">
+<div>
+<span class="font-label-sm text-label-sm text-accent-purple-light uppercase tracking-[0.2em]">Selected Work</span>
+<h2 class="font-display-lg text-display-lg text-on-surface mt-2">Projects</h2>
+</div>
+<a class="hidden md:flex items-center gap-2 text-accent-purple-light font-body-md text-body-md hover:underline" href="https://github.com/ayomide20000005" target="_blank">
+                    View all on GitHub <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Main Project (L) -->
+<a class="md:col-span-8 group cursor-pointer" href="https://github.com/ayomide20000005/hardpaper" target="_blank">
+<div class="relative overflow-hidden rounded-xl aspect-[16/9] bg-surface-container border border-outline-variant/30">
+<img alt="HardPaper" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="hardpaper1.JPG"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent flex flex-col justify-end p-8">
+<span class="font-label-sm text-label-sm text-accent-purple-light uppercase mb-2">Research Tooling</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">HardPaper</h3>
+<p class="font-body-md text-body-md text-text-muted mt-2 max-w-lg">A research-first IDE that bridges software engineering and academic research with AI automation.</p>
+</div>
+</div>
+</a>
+<!-- Project Small (R1) -->
+<a class="md:col-span-4 group cursor-pointer" href="https://github.com/ayomide20000005/Access-Studio" target="_blank">
+<div class="relative overflow-hidden rounded-xl aspect-square bg-surface-container border border-outline-variant/30">
+<img alt="Acces Studio" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="acess1.JPG"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent flex flex-col justify-end p-6">
+<span class="font-label-sm text-label-sm text-accent-purple-light uppercase mb-1">Desktop App</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Acces Studio</h3>
+</div>
+</div>
+</a>
+<!-- Project Row -->
+<a class="md:col-span-4 group cursor-pointer" href="https://github.com/ayomide20000005/Demis" target="_blank">
+<div class="relative overflow-hidden rounded-xl aspect-square bg-surface-container border border-outline-variant/30">
+<img alt="Demis" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="demis1.JPG"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent flex flex-col justify-end p-6">
+<span class="font-label-sm text-label-sm text-accent-purple-light uppercase mb-1">DevOps</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Demis</h3>
+</div>
+</div>
+</a>
+<a class="md:col-span-4 group cursor-pointer" href="https://github.com/ayomide20000005/Boseman" target="_blank">
+<div class="relative overflow-hidden rounded-xl aspect-square bg-surface-container border border-outline-variant/30">
+<img alt="Boseman" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="boseman1.JPG"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent flex flex-col justify-end p-6">
+<span class="font-label-sm text-label-sm text-accent-purple-light uppercase mb-1">Geospatial</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Boseman</h3>
+</div>
+</div>
+</a>
+<a class="md:col-span-4 group cursor-pointer" href="https://usdri-api.onrender.com/docs" target="_blank">
+<div class="relative overflow-hidden rounded-xl aspect-square bg-surface-container border border-outline-variant/30">
+<img alt="USDRI API" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="api1.JPG"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent flex flex-col justify-end p-6">
+<span class="font-label-sm text-label-sm text-accent-purple-light uppercase mb-1">API</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">USDRI API</h3>
+</div>
+</div>
+</a>
+<!-- Full Width -->
+<a class="md:col-span-12 group cursor-pointer" href="https://policy-three-alpha.vercel.app" target="_blank">
+<div class="relative overflow-hidden rounded-xl aspect-[21/9] bg-surface-container border border-outline-variant/30">
+<img alt="Policy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="policy1.JPG"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent flex flex-col justify-end p-8">
+<span class="font-label-sm text-label-sm text-accent-purple-light uppercase mb-2">AI Safety</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Policy</h3>
+<p class="font-body-md text-body-md text-text-muted mt-2 max-w-lg">An AI safety infrastructure tool that generates structured, auditable reasoning architectures for AI systems.</p>
+</div>
+</div>
+</a>
+</div>
+</section>
+<!-- Skills Section -->
+<section class="mt-section-gap" id="skills">
+<div class="text-center mb-16">
+<span class="font-label-sm text-label-sm text-accent-purple-light uppercase tracking-[0.2em]">Toolkit</span>
+<h2 class="font-display-lg text-display-lg text-on-surface mt-2">Technical Skills</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="glass-card rounded-xl p-8 border border-outline-variant/20">
+<h3 class="font-headline-md text-headline-md text-accent-purple-light mb-4 flex items-center gap-2"><i class="devicon-python-plain colored"></i> Programming Languages</h3>
+<div class="flex flex-wrap gap-2">
+<span class="text-sm bg-accent-purple/10 text-accent-purple-light border border-accent-purple/20 px-3 py-1 rounded">Python</span>
+<span class="text-sm bg-accent-purple/10 text-accent-purple-light border border-accent-purple/20 px-3 py-1 rounded">Go</span>
+<span class="text-sm bg-accent-purple/10 text-accent-purple-light border border-accent-purple/20 px-3 py-1 rounded">SQL</span>
+<span class="text-sm bg-accent-purple/10 text-accent-purple-light border border-accent-purple/20 px-3 py-1 rounded">JavaScript</span>
+<span class="text-sm bg-accent-purple/10 text-accent-purple-light border border-accent-purple/20 px-3 py-1 rounded">R</span>
+<span class="text-sm bg-accent-purple/10 text-accent-purple-light border border-accent-purple/20 px-3 py-1 rounded">LaTeX</span>
+<span class="text-sm bg-text-muted/10 text-text-muted border border-text-muted/20 px-3 py-1 rounded">vvvv — visual live-programming environment</span>
+</div>
+</div>
+<div class="glass-card rounded-xl p-8 border border-outline-variant/20">
+<h3 class="font-headline-md text-headline-md text-accent-purple-light mb-4 flex items-center gap-2"><i class="devicon-pytorch-plain colored"></i> Machine Learning &amp; AI</h3>
+<div class="flex flex-wrap gap-2">
+<span class="text-sm bg-accent-purple/10 text-accent-purple-light border border-accent-purple/20 px-3 py-1 rounded">PyTorch</span>
+<span class="text-sm bg-accent-purple/10 text-accent-purple-light border border-accent-purple/20 px-3 py-1 rounded">TensorFlow</span>
+<span class="text-sm bg-accent-purple/10 text-accent-purple-light border border-accent-purple/20 px-3 py-1 rounded">Scikit-learn</span>
+<span class="text-sm bg-accent-purple/10 text-accent-purple-light border border-accent-purple/20 px-3 py-1 rounded">KBS</span>
+<span class="text-sm bg-accent-purple/10 text-accent-purple-light border border-accent-purple/20 px-3 py-1 rounded">RAG</span>
+<span class="text-sm bg-accent-purple/10 text-accent-purple-light border border-accent-purple/20 px-3 py-1 rounded">NumPy</span>
+<span class="text-sm bg-accent-purple/10 text-accent-purple-light border border-accent-purple/20 px-3 py-1 rounded">Pandas</span>
+<span class="text-sm bg-accent-purple/10 text-accent-purple-light border border-accent-purple/20 px-3 py-1 rounded">Hugging Face</span>
+<span class="text-sm bg-accent-purple/10 text-accent-purple-light border border-accent-purple/20 px-3 py-1 rounded">LangChain</span>
+<span class="text-sm bg-accent-purple/10 text-accent-purple-light border border-accent-purple/20 px-3 py-1 rounded">Vector DB</span>
+<span class="text-sm bg-accent-purple/10 text-accent-purple-light border border-accent-purple/20 px-3 py-1 rounded">AI Safety</span>
+</div>
+</div>
+<div class="glass-card rounded-xl p-8 border border-outline-variant/20">
+<h3 class="font-headline-md text-headline-md text-accent-purple-light mb-4 flex items-center gap-2"><i class="devicon-fastapi-plain-wordmark colored"></i> Backend &amp; Cloud</h3>
+<div class="flex flex-wrap gap-2">
+<span class="text-sm bg-accent-purple/10 text-accent-purple-light border border-accent-purple/20 px-3 py-1 rounded">Golang</span>
+<span class="text-sm bg-accent-purple/10 text-accent-purple-light border border-accent-purple/20 px-3 py-1 rounded">PostgreSQL</span>
+<span class="text-sm bg-accent-purple/10 text-accent-purple-light border border-accent-purple/20 px-3 py-1 rounded">MySQL</span>
+<span class="text-sm bg-accent-purple/10 text-accent-purple-light border border-accent-purple/20 px-3 py-1 rounded">MongoDB</span>
+<span class="text-sm bg-accent-purple/10 text-accent-purple-light border border-accent-purple/20 px-3 py-1 rounded">Redis</span>
+<span class="text-sm bg-accent-purple/10 text-accent-purple-light border border-accent-purple/20 px-3 py-1 rounded">FastAPI</span>
+<span class="text-sm bg-accent-purple/10 text-accent-purple-light border border-accent-purple/20 px-3 py-1 rounded">Flask</span>
+<span class="text-sm bg-accent-purple/10 text-accent-purple-light border border-accent-purple/20 px-3 py-1 rounded">AWS</span>
+<span class="text-sm bg-accent-purple/10 text-accent-purple-light border border-accent-purple/20 px-3 py-1 rounded">GCP</span>
+</div>
+</div>
+<div class="glass-card rounded-xl p-8 border border-outline-variant/20">
+<h3 class="font-headline-md text-headline-md text-accent-purple-light mb-4 flex items-center gap-2"><i class="devicon-react-plain colored"></i> Desktop &amp; Frontend</h3>
+<div class="flex flex-wrap gap-2">
+<span class="text-sm bg-accent-purple/10 text-accent-purple-light border border-accent-purple/20 px-3 py-1 rounded">Electron</span>
+<span class="text-sm bg-accent-purple/10 text-accent-purple-light border border-accent-purple/20 px-3 py-1 rounded">Next.js</span>
+<span class="text-sm bg-accent-purple/10 text-accent-purple-light border border-accent-purple/20 px-3 py-1 rounded">React</span>
+<span class="text-sm bg-accent-purple/10 text-accent-purple-light border border-accent-purple/20 px-3 py-1 rounded">Tailwind CSS</span>
+<span class="text-sm bg-accent-purple/10 text-accent-purple-light border border-accent-purple/20 px-3 py-1 rounded">HTML5</span>
+<span class="text-sm bg-accent-purple/10 text-accent-purple-light border border-accent-purple/20 px-3 py-1 rounded">CSS3</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Books Section -->
+<section class="mt-section-gap" id="books">
+<div class="text-center mb-16">
+<span class="font-label-sm text-label-sm text-accent-purple-light uppercase tracking-[0.2em]">Writing</span>
+<h2 class="font-display-lg text-display-lg text-on-surface mt-2">Books</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="rounded-xl overflow-hidden border border-outline-variant/20">
+<img alt="Quiet Shelf" class="w-full hover:scale-105 transition-transform duration-700" src="quiet.jpg"/>
+</div>
+<div class="glass-card rounded-xl p-8 border border-outline-variant/20 flex flex-col justify-center">
+<span class="inline-block w-fit text-xs font-bold uppercase tracking-widest bg-accent-purple text-on-primary px-3 py-1 rounded mb-4">Published</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Quiet Shelf</h3>
+<p class="font-body-md text-body-md text-accent-purple-light italic mb-4">Modernization of Library and Information Science</p>
+<p class="font-body-md text-body-md text-text-muted mb-6">A comprehensive exploration of transforming library systems for the digital age.</p>
+<a class="font-body-md text-body-md text-accent-purple-light hover:underline w-fit" href="quiet.pdf" target="_blank">Get Copy →</a>
+</div>
+<div class="glass-card rounded-xl p-8 border border-outline-variant/20">
+<span class="inline-block text-xs font-bold uppercase tracking-widest bg-accent-purple/10 text-accent-purple-light border border-accent-purple/20 px-3 py-1 rounded mb-4">In Development</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Total Reign</h3>
+<p class="font-body-md text-body-md text-text-muted">A comprehensive book discussing that the 2000s–present represents football's definitive and most dominant peak, an evolution that defines the sport's greatest era to date.</p>
+</div>
+<div class="glass-card rounded-xl p-8 border border-outline-variant/20">
+<span class="inline-block text-xs font-bold uppercase tracking-widest bg-accent-purple/10 text-accent-purple-light border border-accent-purple/20 px-3 py-1 rounded mb-4">In Development</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">You</h3>
+<p class="font-body-md text-body-md text-text-muted">A psychological exploration into the architecture of genius, detailing the core attributes that define high-level intelligence, with a strategic path toward cultivating extreme competence.</p>
+</div>
+</div>
+</section>
+<!-- Philosophy / Gallery Section -->
+<section class="mt-section-gap" id="philosophy">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-8">
+<div class="rounded-xl overflow-hidden border border-outline-variant/20">
+<img alt="HardPaper interface" class="w-full hover:scale-105 transition-transform duration-700" src="hardpaper2.JPG"/>
+</div>
+<div class="p-8 bg-surface-container-low rounded-xl border border-outline-variant/20">
+<h4 class="font-headline-md text-headline-md text-accent-purple-light mb-4 italic">"Research is engineering with better documentation."</h4>
+<p class="font-body-md text-body-md text-text-muted">— working philosophy</p>
+</div>
+</div>
+<div class="flex flex-col h-full justify-between">
+<div class="rounded-xl overflow-hidden border border-outline-variant/20 h-[500px]">
+<img alt="Boseman geospatial platform" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" src="boseman2.JPG"/>
+</div>
+<p class="mt-8 font-body-lg text-body-lg text-text-muted italic leading-relaxed">
+                        High integrity systems come from treating every project — software or research — with the same rigor: clear documentation, reproducible results, and a willingness to adapt to whatever the problem actually needs.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="mt-section-gap py-24 mb-24" id="contact">
+<div class="glass-card rounded-2xl p-8 md:p-16 flex flex-col md:flex-row gap-12 items-center justify-between border-accent-purple/20">
+<div class="max-w-md text-center md:text-left">
+<h2 class="font-display-lg text-display-lg text-on-surface">Ready to start <br/><span class="text-accent-purple-light">something new?</span></h2>
+<p class="font-body-lg text-body-lg text-text-muted mt-6">
+                        Open for collaborations on AI systems, research, and technical writing. Let's build something exceptional together.
+                    </p>
+<div class="mt-8 flex flex-col gap-4">
+<div class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-accent-purple-light">mail</span>
+<span class="font-body-md text-body-md">shuaibayomide96@gmail.com</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-accent-purple-light">location_on</span>
+<span class="font-body-md text-body-md">Remote / Global</span>
+</div>
+</div>
+</div>
+<form class="w-full max-w-lg space-y-6" action="mailto:shuaibayomide96@gmail.com" method="post" enctype="text/plain">
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-accent-purple-light uppercase">Your Name</label>
+<input class="w-full bg-surface-container-lowest border border-outline-variant/50 focus:border-accent-purple focus:ring-0 rounded-lg py-3 px-4 text-on-surface font-body-md" name="name" placeholder="Enter your name" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-accent-purple-light uppercase">Your Email</label>
+<input class="w-full bg-surface-container-lowest border border-outline-variant/50 focus:border-accent-purple focus:ring-0 rounded-lg py-3 px-4 text-on-surface font-body-md" name="email" placeholder="name@company.com" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-accent-purple-light uppercase">Your Message</label>
+<textarea class="w-full bg-surface-container-lowest border border-outline-variant/50 focus:border-accent-purple focus:ring-0 rounded-lg py-3 px-4 text-on-surface font-body-md" name="message" placeholder="Tell me about your project..." rows="4"></textarea>
+</div>
+<button class="w-full bg-accent-purple text-on-primary py-4 rounded-lg font-headline-md text-headline-md font-bold hover:opacity-90 active:scale-[0.98] transition-all" type="submit">Send Message</button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant/20 py-12 px-margin-mobile md:px-margin-desktop mt-section-gap">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col items-center md:items-start gap-2">
+<div class="font-headline-md text-headline-md font-bold text-accent-purple-light">Shuaib Alameen</div>
+<p class="font-body-md text-body-md text-text-muted">© <span id="year"></span> Shuaib Alameen. All rights reserved.</p>
+</div>
+<div class="flex gap-8">
+<a class="font-body-md text-body-md text-text-muted hover:text-accent-purple-light transition-colors opacity-80 hover:opacity-100" href="https://github.com/ayomide20000005" target="_blank">GitHub</a>
+<a class="font-body-md text-body-md text-text-muted hover:text-accent-purple-light transition-colors opacity-80 hover:opacity-100" href="https://www.linkedin.com/in/shuaib-ayomide-05a9aa379/" target="_blank">LinkedIn</a>
+<a class="font-body-md text-body-md text-text-muted hover:text-accent-purple-light transition-colors opacity-80 hover:opacity-100" href="https://x.com/Ayo12309" target="_blank">Twitter(x)</a>
+</div>
+<button class="p-3 rounded-full border border-outline-variant/30 text-accent-purple-light hover:bg-accent-purple hover:text-on-primary transition-all" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+<span class="material-symbols-outlined">arrow_upward</span>
+</button>
+</div>
+</footer>
+<script>
+        document.getElementById('year').textContent = new Date().getFullYear();
 
-    <section id="projects" class="section bg-alt">
-        <div class="container fade-in">
-            <h2 class="section-title">Projects</h2>
-            <div class="grid">
-                <div class="card" data-project="hardpaper" data-images='["hardpaper1.JPG", "hardpaper2.JPG"]'>
-                    <div class="card-image lightbox-trigger">
-                        <img src="hardpaper1.JPG" alt="HardPaper">
-                    </div>
-                    <div class="card-content">
-                        <h3>HardPaper</h3>
-                        <p>Research-first IDE that bridges software engineering and academic research with AI automation.</p>
-                        <div class="tags">
-                            <span>Electron</span><span>LaTeX</span><span>AI</span><span>Node.js</span>
-                        </div>
-                        <div class="links">
-                            <a href="https://github.com/ayomide20000005/hardpaper" target="_blank">GitHub</a>
-                            <button class="details-trigger">Details</button>
-                            <a href="https://github.com/ayomide20000005/hardpaper/releases/download/v1/HardPaper.Setup.1.0.0.exe" download>Download Now</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card" data-project="acces" data-images='["acess1.JPG", "acess2.JPG"]'>
-                    <div class="card-image lightbox-trigger">
-                        <img src="acess1.JPG" alt="Acces Studio">
-                    </div>
-                    <div class="card-content">
-                        <h3>Acces Studio</h3>
-                        <p>Professional-grade offline desktop video creation suite with no-code visual editor.</p>
-                        <div class="tags">
-                            <span>Electron</span><span>React</span><span>Remotion</span><span>FFmpeg</span>
-                        </div>
-                        <div class="links">
-                            <a href="https://github.com/ayomide20000005/Access-Studio" target="_blank">GitHub</a>
-                            <button class="details-trigger">Details</button>
-                            <a href="https://github.com/ayomide20000005/Access-Studio/releases/download/v1.2/Acces.Studio.Setup.1.0.0.exe" download>Download Now</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card" data-project="demis" data-images='["demis1.JPG", "demis2.JPG"]'>
-                    <div class="card-image lightbox-trigger">
-                        <img src="demis1.JPG" alt="Demis">
-                    </div>
-                    <div class="card-content">
-                        <h3>Demis</h3>
-                        <p>Environment Architect utility for VS Code that automates complex dev setup synchronization.</p>
-                        <div class="tags">
-                            <span>TypeScript</span><span>VS Code API</span><span>Node.js</span>
-                        </div>
-                        <div class="links">
-                            <a href="https://github.com/ayomide20000005/Demis" target="_blank">GitHub</a>
-                            <button class="details-trigger">Details</button>
-                            <a href="https://github.com/ayomide20000005/Demis/releases/download/v1.0.0/demis-0.0.1.vsix" download>Download Now</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card" data-project="boseman" data-images='["boseman1.JPG", "boseman2.JPG"]'>
-                    <div class="card-image lightbox-trigger">
-                        <img src="boseman1.JPG" alt="Boseman">
-                    </div>
-                    <div class="card-content">
-                        <h3>Boseman</h3>
-                        <p>Geospatial search engine tracking urban wildlife displacement using satellite imagery.</p>
-                        <div class="tags">
-                            <span>Python</span><span>Flask</span><span>Leaflet</span><span>GIS</span>
-                        </div>
-                        <div class="links">
-                            <a href="https://github.com/ayomide20000005/Boseman" target="_blank">GitHub</a>
-                            <button class="details-trigger">Details</button>
-                            <a href="https://boseman.vercel.app" target="_blank" class="preview-link">Preview</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card" data-project="usdri" data-images='["api1.JPG", "api2.JPG"]'>
-                    <div class="card-image lightbox-trigger">
-                        <img src="api1.JPG" alt="USDRI API">
-                    </div>
-                    <div class="card-content">
-                        <h3>USDRI API</h3>
-                        <p>Deployed calculator API that scores displacement risk from environmental variables using published research methodology.</p>
-                        <div class="tags">
-                            <span>FastAPI</span><span>Python</span><span>Pydantic</span><span>Render</span>
-                        </div>
-                        <div class="links">
-                            <a href="https://github.com/ayomide20000005/USDRI-API" target="_blank">GitHub</a>
-                            <button class="details-trigger">Details</button>
-                            <a href="https://usdri-api.onrender.com/docs" target="_blank" class="preview-link">Live Docs</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Policy card -->
-                <div class="card" data-project="policy" data-images='["policy1.JPG", "policy2.JPG"]'>
-                    <div class="card-image lightbox-trigger">
-                        <img src="policy1.JPG" alt="Policy">
-                    </div>
-                    <div class="card-content">
-                        <h3>Policy</h3>
-                        <p>Policy is an AI safety infrastructure tool that generates structured, auditable reasoning architectures for AI systems.</p>
-                        <div class="tags">
-                            <span>React</span><span>Vite</span><span>Tailwind</span><span>FastAPI</span><span>NVIDIA NIM</span><span>Hugging Face Spaces</span>
-                        </div>
-                        <div class="links">
-                            <a href="https://github.com/ayomide20000005/policy" target="_blank">GitHub</a>
-                            <button class="details-trigger">Details</button>
-                            <a href="https://policy-three-alpha.vercel.app" target="_blank" class="preview-link">Preview</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        // Smooth reveal animation on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
 
-    <section id="skills" class="section">
-        <div class="container fade-in">
-            <h2 class="section-title">Technical Skills</h2>
-            <div class="grid">
-                <div class="card">
-                    <div class="card-content">
-                        <h3><i class="devicon-python-plain colored"></i> Programming Languages</h3>
-                        <div class="tags">
-                            <span><i class="devicon-python-plain"></i> Python</span>
-                            <span><i class="devicon-go-plain-wordmark"></i> Go</span>
-                            <span><i class="devicon-mysql-plain-wordmark"></i> SQL</span>
-                            <span><i class="devicon-javascript-plain"></i> JavaScript</span>
-                            <span><i class="devicon-r-plain"></i> R</span>
-                            <span><i class="devicon-latex-plain"></i> LaTeX</span>
-                            <span>vvvv</span>
-                            <span class="skill-note">visual live-programming environment</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-content">
-                        <h3><i class="devicon-pytorch-plain colored"></i> Machine Learning & AI</h3>
-                        <div class="tags">
-                            <span><i class="devicon-pytorch-plain"></i> PyTorch</span>
-                            <span><i class="devicon-tensorflow-plain"></i> TensorFlow</span>
-                            <span><i class="devicon-scikit-learn-plain"></i> Scikit-learn</span>
-                            <span>KBS</span>
-                            <span>RAG</span>
-                            <span><i class="devicon-numpy-plain"></i> NumPy</span>
-                            <span><i class="devicon-pandas-plain"></i> Pandas</span>
-                            <span>Hugging Face</span>
-                            <span>LangChain</span>
-                            <span>Vector DB</span>
-                            <span>AI Safety</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-content">
-                        <h3><i class="devicon-fastapi-plain-wordmark colored"></i> Backend & Cloud</h3>
-                        <div class="tags">
-                            <span><i class="devicon-go-plain-wordmark"></i> Golang</span>
-                            <span><i class="devicon-postgresql-plain"></i> PostgreSQL</span>
-                            <span><i class="devicon-mysql-plain-wordmark"></i> MySQL</span>
-                            <span><i class="devicon-mongodb-plain-wordmark"></i> MongoDB</span>
-                            <span><i class="devicon-redis-plain"></i> Redis</span>
-                            <span><i class="devicon-fastapi-plain"></i> FastAPI</span>
-                            <span><i class="devicon-flask-plain"></i> Flask</span>
-                            <span><i class="devicon-amazonwebservices-plain-wordmark"></i> AWS</span>
-                            <span><i class="devicon-googlecloud-plain"></i> GCP</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-content">
-                        <h3><i class="devicon-postman-plain"></i> API Integration</h3>
-                        <div class="tags">
-                            <span>RESTful APIs</span>
-                            <span>GraphQL</span>
-                            <span>Webhooks</span>
-                            <span>gRPC</span>
-                            <span>OAuth2</span>
-                            <span>OpenAPI/Swagger</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-content">
-                        <h3><i class="devicon-react-plain colored"></i> Desktop & Frontend</h3>
-                        <div class="tags">
-                            <span><i class="devicon-electron-plain"></i> Electron</span>
-                            <span><i class="devicon-nextjs-plain"></i> Next.js</span>
-                            <span><i class="devicon-react-plain"></i> React</span>
-                            <span><i class="devicon-tailwindcss-plain"></i> Tailwind CSS</span>
-                            <span>HTML5</span>
-                            <span>CSS3</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-content">
-                        <h3><i class="devicon-figma-plain"></i> Product Design</h3>
-                        <div class="tags">
-                            <span>UI Design</span>
-                            <span>UX Architecture</span>
-                            <span>Visual Prototyping</span>
-                            <span>Glassmorphism</span>
-                            <span>Design Systems</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-content">
-                        <h3><i class="devicon-markdown-plain"></i> Authorship & Research</h3>
-                        <div class="tags">
-                            <span>Technical Writing</span>
-                            <span>Book Authorship</span>
-                            <span>Scientific Communication</span>
-                            <span>Technical Documentation</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
 
-    <section id="books" class="section bg-alt">
-        <div class="container fade-in">
-            <h2 class="section-title">Books</h2>
-            <div class="subsection-title">Published</div>
-            <div class="book-card published-book" data-images='["quiet.jpg", "quiet2.jpg"]'>
-                <div class="book-cover">
-                    <img src="quiet.jpg" alt="Quiet Shelf" class="lightbox-trigger">
-                </div>
-                <div class="book-info">
-                    <div class="book-header">
-                        <h3>Quiet Shelf</h3>
-                        <span class="status published">Published</span>
-                    </div>
-                    <p class="book-subtitle">Modernization of Library and Information Science</p>
-                    <p>A comprehensive exploration of transforming library systems for the digital age.</p>
-                    <div class="links" style="margin-top: 15px;">
-                        <a href="quiet.pdf" target="_blank">Get Copy</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="subsection-title">In Development</div>
-            <div class="book-card placeholder no-cover">
-                <div class="book-info no-cover-info">
-                    <div class="book-header">
-                        <h3>Total Reign</h3>
-                        <span class="status">In Development</span>
-                    </div>
-                    <p class="book-desc">A comprehensive book discussing that the 2000s–present represents football's definitive and most dominant peak, an evolution that defines the sport's greatest era to date.</p>
-                </div>
-            </div>
-            <div class="book-card placeholder no-cover">
-                <div class="book-info no-cover-info">
-                    <div class="book-header">
-                        <h3>You</h3>
-                        <span class="status">In Development</span>
-                    </div>
-                    <p class="book-desc">A psychological exploration into the architecture of genius, detailing the core attributes that define high-level intelligence. This book provides a framework for identifying innate potential and offers a strategic path for cultivating extreme competence in those seeking to reach the threshold of mastery.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer id="contact">
-        <div class="container fade-in">
-            <h2 class="section-title" style="border:none; padding:0;">Let's Connect</h2>
-            <p class="bio">Open for collaborations on AI systems, research, and technical writing.</p>
-            <div class="buttons">
-                <a href="mailto:shuaibayomide96@gmail.com" class="btn primary">Email Me</a>
-            </div>
-            <div class="socials">
-                <a href="https://github.com/ayomide20000005" target="_blank">GitHub</a>
-                <a href="https://www.linkedin.com/in/shuaib-ayomide-05a9aa379/" target="_blank">Linkedin</a>
-                <a href="https://x.com/Ayo12309" target="_blank">Twitter(x)</a>
-            </div>
-            <p class="copyright">© <span id="year"></span> Shuaib Alameen. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <div id="project-modal" class="modal">
-        <div class="modal-overlay"></div>
-        <div class="modal-content">
-            <span class="modal-close">&times;</span>
-            <div class="modal-body">
-                <h2 id="modal-title"></h2>
-                <p id="modal-description"></p>
-                <div class="modal-tags" id="modal-tags"></div>
-                <div class="modal-details" id="modal-details"></div>
-                <div class="modal-links" id="modal-links"></div>
-            </div>
-        </div>
-    </div>
-
-    <div id="lightbox" class="lightbox">
-        <span class="lightbox-close">&times;</span>
-        <span class="lightbox-prev">&#10094;</span>
-        <img id="lightbox-img" class="lightbox-content">
-        <span class="lightbox-next">&#10095;</span>
-        <p id="lightbox-caption"></p>
-    </div>
-
-    <script src="script.js"></script>
-</body>
-</html>
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+    </script>
+</body></html>
